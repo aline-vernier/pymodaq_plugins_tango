@@ -1,11 +1,13 @@
 ## To modify by developer(s) of the plugin
 
 [plugin-info]
-SHORT_PLUGIN_NAME = 'template'  #to be modified, for instance daqmx then rename the module name:
+SHORT_PLUGIN_NAME = 'tango'  #to be modified, for instance daqmx then rename the module name:
 # (pymodaq_plugins_tango become pymodaq_plugins_daqmx for instance)
 
 package-url = 'https://github.com/PyMoDAQ/pymodaq_plugins_tango' #to modify
-description = 'TANGO controls plugins for PyMoDAQ !'
+
+description = 'TANGO controls plugins for PyMoDAQ'
+
 
 author = 'Aline Vernier'
 author-email = 'aline.vernier@polytechnique.edu'
@@ -21,4 +23,3 @@ extensions = false  # true if plugins contains dashboard extensions
 models = false  # true if plugins contains pid models or other models (optimisation...)
 h5exporters = false  # true if plugin contains custom h5 file exporters
 scanners = false  # true if plugin contains custom scan layout (daq_scan extensions)
-
