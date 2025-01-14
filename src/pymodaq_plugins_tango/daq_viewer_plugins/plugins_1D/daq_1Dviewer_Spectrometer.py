@@ -7,8 +7,8 @@ from pymodaq.utils.parameter import Parameter
 
 import pymodaq.utils.math_utils as mutils
 
-from pymodaq_plugins_template.hardware.TANGO.tango_device import TangoDevice
-from pymodaq_plugins_template.hardware.TANGO.tango_utils import TangoTomlConfig
+from pymodaq_plugins_tango.hardware.TANGO.tango_device import TangoDevice
+from pymodaq_plugins_tango.hardware.TANGO.tango_utils import TangoTomlConfig
 
 
 class DAQ_1Dviewer_Spectrometer(DAQ_Viewer_base):
