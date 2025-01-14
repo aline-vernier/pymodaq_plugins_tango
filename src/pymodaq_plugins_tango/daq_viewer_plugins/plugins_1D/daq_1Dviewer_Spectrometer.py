@@ -43,7 +43,7 @@ z
 
     """Find right place for toml file"""
     print(os.getcwd())
-    config = TangoTomlConfig('spectrometers', "hardware/TANGO/tango_devices.toml")
+    config = TangoTomlConfig('spectrometers', "./src/hardware/TANGO/tango_devices.toml")
     print(config.addresses)
     params = comon_parameters + [{'title': 'Device address:', 'name': 'dev_address',
                                   'type': 'list', 'value': 'SY-SPECTRO_1/Spectrometer/FE1',
