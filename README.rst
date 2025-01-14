@@ -1,4 +1,4 @@
-pymodaq_plugins_template
+pymodaq_plugins_tango
 ########################
 
 .. the following must be adapted to your developed package, links to pypi, github  description...
@@ -25,7 +25,7 @@ Use this template to create a repository on your account and start the developme
 Authors
 =======
 
-* First Author  (myemail@xxx.org)
+* Aline Vernier  (aline.vernier@polytechnique.edu)
 * Other author (myotheremail@xxx.org)
 
 .. if needed use this field
@@ -33,8 +33,7 @@ Authors
     Contributors
     ============
 
-    * First Contributor
-    * Other Contributors
+    * 
 
 .. if needed use this field
 
@@ -49,27 +48,23 @@ Below is the list of instruments included in this plugin
 Actuators
 +++++++++
 
-* **yyy**: control of yyy actuators
-* **xxx**: control of xxx actuators
+* No actuators so far
 
 Viewer0D
 ++++++++
 
-* **yyy**: control of yyy 0D detector
-* **xxx**: control of xxx 0D detector
+* No 0D Viewer so far
 
 Viewer1D
 ++++++++
 
-* **yyy**: control of yyy 1D detector
-* **xxx**: control of xxx 1D detector
+* Currently developing 1D Viewer for spectrometer
 
 
 Viewer2D
 ++++++++
 
-* **yyy**: control of yyy 2D detector
-* **xxx**: control of xxx 2D detector
+* No 2D Viewer so far
 
 
 PID Models
@@ -83,6 +78,22 @@ Extensions
 Installation instructions
 =========================
 
-* PyMoDAQ’s version.
-* Operating system’s version.
-* What manufacturer’s drivers should be installed to make this plugin run?
+Instrument plugins for stuff on the tango bus
+        * Anything on the tango bus can be viewed. Address and attributes should be entered in toml file
+        * Tested with TANGO controls on a virtual machine (communication through the virtual switch)
+        * PyMoDAQ Version 4.4.7
+        * OS : Microsoft 11 Pro 10.0.22631
+        * pyTango and tomllib should be installed. To test pyTango install, run the following lines in the CLI
+            python
+            from tango import DeviceProxy
+            tango_host = tango.ApiUtil.get_env_var("TANGO_HOST")
+            print(tango_host)
+            print(tango.__version__)
+        To test communication, run :
+            my_device = DeviceProxy(<some known device address, e.g. "SY-SPECTRO_1/Spectrometer/FE1">)
+            print(my_device.read_attribute(<some known attribute, e.g. "lambda">).value)
+        * The wrapper is in the hardware folder. It uses the tango bus as some sort of virtual hardware.
+        This is also where the toml config file is located. It has to be filled for the plugin to work !
+
+    This object inherits all functionalities to communicate with PyMoDAQ’s DAQ_Viewer module through inheritance via
+    DAQ_Viewer_base. It makes a bridge between the DAQ_Viewer module and the Python wrapper of a particular instrument.
