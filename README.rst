@@ -26,7 +26,7 @@ Authors
 =======
 
 * Aline Vernier  (aline.vernier@polytechnique.edu)
-* Other author (myotheremail@xxx.org)
+
 
 .. if needed use this field
 
