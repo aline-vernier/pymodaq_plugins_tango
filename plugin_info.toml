@@ -4,11 +4,11 @@
 SHORT_PLUGIN_NAME = 'template'  #to be modified, for instance daqmx then rename the module name:
 # (pymodaq_plugins_tango become pymodaq_plugins_daqmx for instance)
 
-package-url = 'https://github.com/PyMoDAQ/pymodaq_plugins_template' #to modify
-description = 'some word about your plugin'
+package-url = 'https://github.com/PyMoDAQ/pymodaq_plugins_tango' #to modify
+description = 'TANGO controls plugins for PyMoDAQ !'
 
-author = 'Author Name'
-author-email = 'Author email'
+author = 'Aline Vernier'
+author-email = 'aline.vernier@polytechnique.edu'
 license = 'MIT'
 
 [plugin-install]
